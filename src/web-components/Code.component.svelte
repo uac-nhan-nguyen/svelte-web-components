@@ -5,7 +5,7 @@
 
 <div>
   <p>
-    This is wrap the children in code 
+    This is wrap the children do 
     <code>
       <slot />
     </code>
