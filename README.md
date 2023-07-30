@@ -1,8 +1,10 @@
-# Vite + Svelte + Tailwind
+# Svelte + Web Components
 
-Boilerplate for Vite + Svelte + Tailwind setup in 2023
+Minimal web component setup with svelte
 
-Demo: https://svelte-tailwind-kit.web.app
+Demo: https://svelte-web-components.web.app
+
+Setup from https://www.casperfeng.com/blog/creating-web-components-using-svelte
 
 ## Setup
 

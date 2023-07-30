@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Svelte + Tailwind</title>
+    <title>Svelte Web Components</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script src="/src/web-components/Hello.component.svelte" type="module"></script>
+    <script src="/src/web-components/Hi.component.svelte" type="module"></script>
+    <script src="/src/web-components/Code.component.svelte" type="module"></script>
+    <div class="border-solid border-2">
+
+    <say-hi name="Nhan"> </say-hi>
+    <say-hello name="Nhan"></say-hello>
+    <say-code>
+      const a = 1
+    </say-code>
+    </div>
   </body>
 </html>
