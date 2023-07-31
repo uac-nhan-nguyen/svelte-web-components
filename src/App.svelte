@@ -22,16 +22,7 @@
 
 <svelte:head>
   <script
-    src="/src/web-components/Hello.component.svelte"
-    type="module"
-  ></script>
-  <script src="/src/web-components/Hi.component.svelte" type="module"></script>
-  <script
-    src="/src/web-components/Code.component.svelte"
-    type="module"
-  ></script>
-  <script
-    src="/src/web-components/DropdownOnClick.component.svelte"
+    src="/wc/nx-dropdown-on-click.component.svelte"
     type="module"
   ></script>
 </svelte:head>
@@ -75,9 +66,4 @@
       {/each}
     </div>
   </nx-dropdown-on-click>
-
-  <say-code> const a = 1 </say-code>
-  <say-hi name="Nhan" />
-  <say-hello name="Nhan" />
-  <say-code> const a = 1 </say-code>
 </main>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Svelte Web Components</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/wc/nx-dropdown-on-click.component.svelte" type="module"></script>
+</head>
+
+<body>
+  <h1>Html only example</h1>
+
+  <nx-dropdown-on-click>
+    <button slot="button" class="bg-slate-400 text-white p-2">Hit me</button>
+    <div slot="dropdown" class="bg-slate-200 p-2 border-solid border-2 border-black">
+      <div class="hover:bg-slate-300 cursor-pointer"> Edit </div>
+      <div class="hover:bg-slate-300 cursor-pointer"> Delete </div>
+    </div>
+  </nx-dropdown-on-click>
+</body>
+
+</html>
