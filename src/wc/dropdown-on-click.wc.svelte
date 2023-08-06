@@ -1,4 +1,4 @@
-<svelte:options tag="nx-dropdown-on-click" />
+<svelte:options tag="dropdown-on-click" />
 
 <script>
   let isOpen = false;

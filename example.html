@@ -8,19 +8,20 @@
   <title>Svelte Web Components</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/wc/nx-dropdown-on-click.js" type="module"></script>
+  <script src="/src/wc/dropdown-on-click.wc.svelte" type="module"></script>
 </head>
 
 <body>
   <h1>Html only example</h1>
 
-  <nx-dropdown-on-click>
+  <dropdown-on-click>
     <button slot="button" class="bg-slate-400 text-white p-2">Hit me</button>
     <div slot="dropdown" class="bg-slate-200 p-2 border-solid border-2 border-black">
+      <a class="hover:bg-slate-300 cursor-pointer" href="/"> Home </a>
       <div class="hover:bg-slate-300 cursor-pointer"> Edit </div>
       <div class="hover:bg-slate-300 cursor-pointer"> Delete </div>
     </div>
-  </nx-dropdown-on-click>
+  </dropdown-on-click>
 </body>
 
 </html>
