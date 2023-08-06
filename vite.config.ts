@@ -21,10 +21,20 @@ export default defineConfig({
   build: {
     sourcemap: true,
     target: "modules",
-    lib: {
-      entry: "src/main.ts",
-      name: "<<name>>",
-      fileName: "components",
-    },
+    // lib: {
+    //   entry: ["src/main.ts"],
+    //   name: "<<name>>",
+    //   fileName: "components",
+    // },
+    rollupOptions: {
+      input: {
+        "main": "src/main.ts",
+        "wc/nx-dropdown-on-click": "wc/nx-dropdown-on-click.component.svelte"
+      },
+      output: {
+        entryFileNames: '[name].js'
+      }
+    }
+
   },
 });
