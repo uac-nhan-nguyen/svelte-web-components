@@ -3,7 +3,7 @@
 
 ```html
 <head>
-  <script src="{DOMAIN}/wc/markdown-block.js" type="module"></script>
+  <script src="https://wc.tldrblog.dev/wc/markdown-block.js" type="module"></script>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 ```html
 <head>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/src/wc/dropdown-on-click.wc.svelte" type="module"></script>
+  <script src="https://wc.tldrblog.dev/wc/dropdown-on-click.wc.js" type="module"></script>
   <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/button.min.js"></script>
 </head>
 

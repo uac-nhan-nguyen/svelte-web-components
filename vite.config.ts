@@ -33,7 +33,6 @@ export default defineConfig({
     // },
     rollupOptions: {
       input: {
-        "example.html": "example.html",
         "index.html": "index.html",
         ...Object.fromEntries(
           glob.sync('src/wc/**/*.wc.svelte').map(file => {
