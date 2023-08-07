@@ -2,27 +2,13 @@
   import logo from "./assets/logo.svg";
 
   let buttonLabel = "Hit me";
-
-  const example1 = `
-  <nx-dropdown-on-click>
-    <button slot="button" class="bg-slate-400 text-white p-2">{buttonLabel}</button>
-    <div slot="dropdown" class="bg-slate-200 p-2 border-solid border-2 border-black" >
-      {#each [{ label: "Edit", value: "I'm changed" }, { label: "Delete", value: "I'm deleted" }] as item}
-        <div
-          class="hover:bg-slate-300 cursor-pointer"
-          on:click={() => (buttonLabel = item.value)}
-        >
-          {item.label}
-        </div>
-      {/each}
-    </div>
-  </nx-dropdown-on-click>
-  `;
 </script>
 
 <svelte:head>
   <script src="/src/wc/code-block.wc.svelte" type="module"></script>
+  <script src="/src/wc/markdown-block.wc.svelte" type="module"></script>
   <script src="/src/wc/dropdown-on-click.wc.svelte" type="module"></script>
+  <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/button.min.js" ></script>
 </svelte:head>
 
 <main class="items-center justify-items-center grid w-full gap-4 mt-[40px]">
@@ -44,30 +30,25 @@
     >
   </h1>
 
-  <pre>{example1}</pre>
-
-  <code-block src="/hello_example.md" />
+  <markdown-block src="/hello_example.md" />
 
   <dropdown-on-click>
-    <button slot="button" class="bg-slate-400 text-white p-2"
-      >{buttonLabel}</button
-    >
-    <div
-      slot="dropdown"
-      class="bg-slate-200 p-2 border-solid border-2 border-black"
-    >
+    <bx-btn slot="button">{buttonLabel}</bx-btn>
+    <div slot="dropdown" class="grid border-black" >
       {#each [{ label: "Edit", value: "I'm changed" }, { label: "Delete", value: "I'm deleted" }, { label: "Example", href: "/example.html" }] as item}
         {#if item.value}
-          <div
-            class="hover:bg-slate-300 cursor-pointer"
+          <bx-btn
+            kind="tertiary"
             on:click={() => (buttonLabel = item.value)}
             on:keypress={() => (buttonLabel = item.value)}
           >
             {item.label}
-          </div>
+          </bx-btn>
         {:else if item.href}
           <a class="hover:bg-slate-300 cursor-pointer" href={item.href}>
-            {item.label}
+            <bx-btn kind="tertiary">
+              {item.label}
+            </bx-btn>
           </a>
         {/if}
       {/each}

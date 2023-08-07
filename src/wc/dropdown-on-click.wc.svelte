@@ -13,7 +13,7 @@
     on:click={close}
     on:keypress={close}
   />
-  <div on:click={toggle} on:keypress={toggle}>
+  <div class="button-wrapper" on:click={toggle} on:keypress={toggle}>
     <slot name="button" />
   </div>
   <div
@@ -57,5 +57,9 @@
   }
   .close-layer-open {
     display: block;
+  }
+
+  .button-wrapper {
+    width: fit-content;
   }
 </style>

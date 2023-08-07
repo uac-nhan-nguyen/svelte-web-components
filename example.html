@@ -8,18 +8,22 @@
   <title>Svelte Web Components</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/src/wc/code-block.wc.svelte" type="module"></script>
+  <script src="/src/wc/markdown-block.wc.svelte" type="module"></script>
   <script src="/src/wc/dropdown-on-click.wc.svelte" type="module"></script>
+  <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/button.min.js"></script>
 </head>
 
-<body>
-  <h1>Html only example</h1>
+<body class="grid justify-center">
+  <h1 class="text-4xl text-center">Html only example</h1>
+  <markdown-block className="w-[600px] h-[400px] overflow-auto" src="/hello_example.md"></markdown-block>
 
   <dropdown-on-click>
-    <button slot="button" class="bg-slate-400 text-white p-2">Hit me</button>
-    <div slot="dropdown" class="bg-slate-200 p-2 border-solid border-2 border-black">
-      <a class="hover:bg-slate-300 cursor-pointer" href="/"> Home </a>
-      <div class="hover:bg-slate-300 cursor-pointer"> Edit </div>
-      <div class="hover:bg-slate-300 cursor-pointer"> Delete </div>
+    <bx-btn slot="button">Hit me</bx-btn>
+    <div slot="dropdown" class="border-black">
+      <a href="/" class="grid">
+        <bx-btn kind="tertiary">Home</bx-btn>
+      </a>
     </div>
   </dropdown-on-click>
 </body>

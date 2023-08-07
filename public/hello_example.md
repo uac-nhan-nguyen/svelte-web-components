@@ -1,16 +1,36 @@
+
+# `markdown-block`
+
 ```html
-<nx-dropdown-on-click>
-  <button slot="button" class="bg-slate-400 text-white p-2">{buttonLabel}</button>
-  <div slot="dropdown" class="bg-slate-200 p-2 border-solid border-2 border-black">
-    {#each [{ label: "Edit", value: "I'm changed" }, { label: "Delete", value: "I'm deleted" }] as item}
-    <div
-        class="hover:bg-slate-300 cursor-pointer"
-        on:click={()
-    => (buttonLabel = item.value)}
-    >
-    {item.label}
-  </div>
-  {/each}
-  </div>
-</nx-dropdown-on-click>
+<head>
+  <script src="{DOMAIN}/wc/markdown-block.js" type="module"></script>
+</head>
+
+<body>
+  <markdown-block src="/hello_example.md"></markdown-block>
+</body>
+```
+
+# `dropdown-on-click`
+
+```html
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/src/wc/dropdown-on-click.wc.svelte" type="module"></script>
+  <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/button.min.js"></script>
+</head>
+
+<body>
+  <dropdown-on-click>
+    <bx-btn slot="button">Hit me</bx-btn>
+    <div slot="dropdown" class="border-black">
+      <a href="/" class="grid">
+        <bx-btn kind="tertiary">Home</bx-btn>
+      </a>
+      <a href="/example.html" class="grid">
+        <bx-btn kind="tertiary">Example</bx-btn>
+      </a>
+    </div>
+  </dropdown-on-click>
+</body>
 ```
