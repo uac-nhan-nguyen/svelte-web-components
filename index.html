@@ -7,17 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svelte Web Components</title>
 
+  <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/button.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <script src="/src/styled/code.wc.svelte" type="module"></script> -->
-  <!-- <script src="/src/styleless/dropdown-on-click.wc.svelte" type="module"></script> -->
 </head>
 
 <body>
+  <script type="module" src="/src/wc/code-block.wc.svelte"></script>
+  <script type="module" src="/src/wc/markdown-block.wc.svelte"></script>
+  <script type="module" src="/src/wc/dropdown-on-click.wc.svelte"></script>
+  <main class="items-center justify-items-center grid w-full gap-4 mt-[40px] pb-10">
+    <div>
+      <a href="https://tldrdev.blog" target="_blank" rel="noreferrer">
+        <img src="/logo.svg" class="h-40" alt="N Logo" />
+      </a>
+    </div>
+    <h1 class="text-3xl">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank">Web Components</a>
+      in
+      <a href="https://svelte.dev/docs" target="_blank">Svelte</a>
+    </h1>
+    <div>
+      <a href="https://github.com/uac-nhan-nguyen/svelte-web-components" target="_blank">Open on github</a>
+    </div>
+    
 
+    <markdown-block class="w-[90vw] md:w-[600px]" src="/hello_example.md"></markdown-block>
 
- <div id="app"></div>
- <script type="module" src="/src/main.ts"></script>
-
+    <dropdown-on-click dropdownYPosition="above">
+      <button slot="button" class="text-xl p-4">Hit me</button>
+      <div slot="dropdown" class="border-black w-[200px]">
+        <a href="/" class="grid">
+          <bx-btn kind="tertiary" size="sm">Home</bx-btn>
+        </a>
+        <a href="https://github.com/uac-nhan-nguyen/svelte-web-components" target="_blank" class="grid">
+          <bx-btn kind="tertiary" size="sm">Source code</bx-btn>
+        </a>
+      </div>
+    </dropdown-on-click>
+  </main>
 </body>
 
 </html>

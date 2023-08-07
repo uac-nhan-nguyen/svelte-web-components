@@ -5,7 +5,6 @@
 
   export let content: string | undefined = undefined;
   export let src: string | undefined = undefined;
-  export let className: string | undefined = undefined;
 
   if (src != null) {
     fetch(src)
